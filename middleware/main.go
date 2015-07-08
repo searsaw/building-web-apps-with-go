@@ -13,7 +13,7 @@ func main() {
 		negroni.NewRecovery(),
 		negroni.HandlerFunc(MyMiddleware),
 		negroni.NewLogger(),
-		negroni.NewStatic(http.Dir("public")),
+		negroni.NewStatic(http.Dir("middleware/public")),
 	)
 
 	n.Run(":8080")
